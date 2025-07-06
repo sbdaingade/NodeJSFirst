@@ -1,0 +1,20 @@
+{
+    "name": "Sachin",
+    "description": "JavaScript sprint implementation",
+    "version": "0.0.1",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^5.1.0",
+        "package.json": "^0.0.0"
+    },
+    "engines": {
+        "node": "14.x"
+    },
+    "license": "MIT",
+    "keywords": [
+        "node"
+    ]
+}
