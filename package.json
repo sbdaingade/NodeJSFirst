@@ -1,5 +1,5 @@
 {
-    "name": "Sachin",
+    "name": "sachin",
     "description": "JavaScript sprint implementation",
     "version": "0.0.1",
     "main": "server.js",

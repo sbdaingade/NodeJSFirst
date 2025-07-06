@@ -2,7 +2,7 @@ const express = require('express'); // Import the express module
 const app = express(); // Create an Express application
 const port = 3000; // Define the port your server will listen on
 
-app.use(express.json());
+app.use(express.json()); 
 
 const users = [
     { email: 'sachin@gmail.com', password: 'Pass@1234' },
@@ -11,7 +11,9 @@ const users = [
 
 // Route for handling login requests
 app.post('/login', (req, res) => {
-    const { email, password } = req.body; // Extract email and password from the request body
+    const { email, password } = req.body;
+    console.log('Received email:', email); // Add this for debugging!
+    console.log('Received password:', password); 
 
     // Basic validation
     if (!email || !password) {
