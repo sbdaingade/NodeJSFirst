@@ -32,7 +32,23 @@ app.post('/login', (req, res) => {
 
 // Define a route for the root URL ('/')
 app.get('/getData', (req, res) => {
-  res.send('Hello World! Sachin'); // Send "Hello World!" as the response
+  res.send('Hello World! Sachin Daingade'); // Send "Hello World!" as the response
+});
+
+// 
+app.get('/getDate', (req, res) => {
+
+    const now = new Date();
+    const responseData = {
+       iso: now.toISOString(), // Correct: Call the method with ()
+        localeString: now.toLocaleString(),
+        dateString: now.toLocaleDateString(),
+        timeString: now.toLocaleTimeString(),
+       // customFormat: `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')} ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+    };
+   // res.json(responseData);
+
+    res.status(200).json({ status: responseData});
 });
 
 
@@ -41,3 +57,4 @@ app.get('/getData', (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
+
